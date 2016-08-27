@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" value="猜数字" id="btn">
+
+	<script src="js/jquery-1.10.2.js"></script>
+	<script>
+
+		function cai(num,num1){
+			$()
+			if(num>num1){
+				console.log("猜大了");
+			}
+			if(num<num1){
+				console.log("猜小了");
+			}
+			if(num==num1){
+				console.log("猜对了");
+			}
+		}
+
+		$("#btn").click(function(){
+			var num = $("#txt").val()
+			var num1 = Number(num);
+			var num2 = 5;
+			cai(num1,num2);
+		})
+	</script>
+</body>
+</html>
